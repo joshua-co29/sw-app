@@ -1,8 +1,8 @@
 {
   "name": "something",
   "productName": "App",
-  "version": "1.1.0",
-  "description": "A collaborative blueprint-themed To-Do application for modern teams.",
+  "version": "1.3.0",
+  "description": "this is just an app.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -29,7 +29,12 @@
     "files": [
       "**/*",
       "!dist"
-    ]
+    ],
+    "publish": {
+      "provider": "github",
+      "owner": "joshua-co29",
+      "repo": "sw-app"
+    }
   },
   "keywords": [],
   "author": "",
