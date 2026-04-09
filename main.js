@@ -1,11 +1,10 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
+const { autoUpdater } = require('electron-updater');
 
-// Set the app name for Task Manager and System tray
-app.setName('App');
-if (process.platform === 'win32') {
-  app.setAppUserModelId('com.app.something');
-}
+// Basic auto-updater config
+autoUpdater.autoDownload = true;
+autoUpdater.allowPrerelease = false;
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -42,6 +41,26 @@ function createWindow() {
     const win = BrowserWindow.fromWebContents(event.sender);
     win.close();
   });
+  // Start update check
+  autoUpdater.checkForUpdatesAndNotify();
+
+  autoUpdater.on('update-available', () => {
+    mainWindow.webContents.send('update_available');
+  });
+
+  autoUpdater.on('update-downloaded', () => {
+    mainWindow.webContents.send('update_downloaded');
+  });
+
+  ipcMain.on('restart_app', () => {
+    autoUpdater.quitAndInstall();
+  });
+}
+
+// Set the app name for System behavior
+app.setName('App');
+if (process.platform === 'win32') {
+  app.setAppUserModelId('com.app.something');
 }
 
 app.whenReady().then(() => {

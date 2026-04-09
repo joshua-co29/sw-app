@@ -700,6 +700,68 @@ textarea.accent-input {
     gap: 12px;
 }
 
+.header-icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    opacity: 0.6;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon-btn:hover {
+    opacity: 1;
+    background: var(--border-secondary);
+}
+
+/* Update Notification Styling */
+#update-container {
+    position: relative;
+    margin-right: 8px;
+}
+
+.update-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    background: #ef4444; /* Alert Red */
+    border-radius: 50%;
+    border: 1.5px solid var(--bg-secondary);
+}
+
+.update-btn.ready {
+    color: var(--accent-color);
+    opacity: 1;
+    animation: updatePulse 2.5s infinite;
+}
+
+@keyframes updatePulse {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.05); filter: brightness(1.3); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
+
+.dropdown-item.highlight {
+    background: var(--accent-color);
+    color: var(--bg-primary);
+    font-weight: 700;
+    margin: 4px 8px;
+    border-radius: 4px;
+    width: auto;
+}
+
+.dropdown-item.highlight:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
 .action-btn {
     background: transparent;
     border: none;

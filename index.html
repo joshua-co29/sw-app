@@ -62,6 +62,30 @@
                         <path d="M6 9l6 6 6-6"></path>
                     </svg>
 
+                        <!-- Update Notification -->
+                        <div id="update-container" style="display: none;">
+                            <button id="update-notify-btn" class="header-icon-btn update-btn" title="Update Available">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                <span class="update-badge"></span>
+                            </button>
+                            <div id="update-dropdown" class="profile-dropdown">
+                                <div class="dropdown-header">
+                                    <span class="dropdown-name">UPDATE AVAILABLE</span>
+                                    <span class="dropdown-email">v1.1.0 Ready</span>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <a href="https://github.com/joshua-co29/sw-app/releases" target="_blank" class="dropdown-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                    Read Patch Notes
+                                </a>
+                                <button id="restart-update-btn" class="dropdown-item highlight">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                                    Update Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- User Profile -->
                     <!-- Profile Dropdown -->
                     <div class="profile-dropdown" id="profile-dropdown">
                         <div class="dropdown-item active">

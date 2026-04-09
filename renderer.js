@@ -2,7 +2,7 @@
 const { ipcRenderer } = require('electron');
 const { initializeApp } = require('firebase/app');
 const { getAnalytics } = require('firebase/analytics');
-const { getFirestore, collection, addDoc, onSnapshot, query, orderBy, updateDoc, deleteDoc, doc, setDoc, serverTimestamp, where } = require('firebase/firestore');
+const { getFirestore, collection, addDoc, onSnapshot, query, orderBy, updateDoc, deleteDoc, doc, setDoc, getDoc, serverTimestamp, where } = require('firebase/firestore');
 
 // Firebase configuration
 const firebaseConfig = {
@@ -248,7 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             signInBtn.style.display = 'block';
             profileTrigger.style.display = 'none';
-            // Removed auto-show to fulfill user request
         }
     }
 

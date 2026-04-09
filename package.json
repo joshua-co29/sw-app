@@ -39,6 +39,7 @@
     "electron-builder": "^26.8.1"
   },
   "dependencies": {
+    "electron-updater": "^6.8.3",
     "firebase": "^12.11.0"
   }
 }
